@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xdd="http://www.w3.org/2001/XMLSchema"
+            xmlns:xds="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.tagdemo.org/schema/demo"
+            xmlns="http://www.tagdemo.org/schema/demo"
+            elementFormDefault="qualified">
+    <xsd:annotation>
+        <xsd:documentation>
+            <![CDATA[
+                   自定义标签
+                ]]>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:element name="test">
+        <xsd:complexType>
+            <xsd:attribute name="id" type="xsd:string" use="required"></xsd:attribute>
+            <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            <xsd:attribute name="user" type="xsd:string" use="required"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
