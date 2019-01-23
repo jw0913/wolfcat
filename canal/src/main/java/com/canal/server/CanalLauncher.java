@@ -11,7 +11,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 /**
- * canal启动类
+ * canal服务启动类
  */
 public class CanalLauncher implements InitializingBean {
     private static final String CLASSPATH_PREFIX = "classpath:";
@@ -21,6 +21,7 @@ public class CanalLauncher implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         try{
+            //加载canal server配置文件
             Assert.notNull(this.canalProperties,"canalProperties is null or empty");
             String conf = System.getProperty("canal.conf",this.canalProperties);
             Properties properties = new Properties();
@@ -30,7 +31,7 @@ public class CanalLauncher implements InitializingBean {
             }else{
                 properties.load(new FileInputStream(conf));
             }
-
+            //启动canal server服务
             logger.info(" start the canal server ......");
             final CanalController controller = new CanalController();
             controller.start();
