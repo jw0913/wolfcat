@@ -58,7 +58,7 @@ public class CaffeineDemo {
      */
     public void loadingCache(){
         LoadingCache<String, Object> loadingCache = Caffeine.newBuilder()
-                .maximumSize(10_000)
+                .maximumSize(10000)
                 .expireAfterWrite(10, TimeUnit.MINUTES)
                 .build(key -> createCache(key));
         String key = "name1";
@@ -80,7 +80,7 @@ public class CaffeineDemo {
      */
     public void asyncLoadingCache(){
         AsyncLoadingCache<String, Object> asyncLoadingCache = Caffeine.newBuilder()
-                .maximumSize(10_000)
+                .maximumSize(10000)
                 .expireAfterWrite(10, TimeUnit.MINUTES)
                 // Either: Build with a synchronous computation that is wrapped as asynchronous
                 .buildAsync(key -> createCache(key));
