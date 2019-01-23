@@ -18,7 +18,7 @@ public class CanalLauncher implements InitializingBean {
     private static final Logger logger=LoggerFactory.getLogger(CanalLauncher.class);
 
     private String canalProperties;
-
+    @Override
     public void afterPropertiesSet() throws Exception {
         try{
             Assert.notNull(this.canalProperties,"canalProperties is null or empty");
