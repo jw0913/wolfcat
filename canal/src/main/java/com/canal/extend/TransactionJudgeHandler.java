@@ -4,7 +4,7 @@ import com.alibaba.otter.canal.protocol.CanalEntry;
 
 public interface TransactionJudgeHandler {
    TransactionIdentify judge(CanalEntry.Entry entry);
-    default boolean ignorJudgeCanalEntry(){
+    default boolean ignoreJudgeCanalEntry(){
         return false;
     }
     default boolean ignoreTransaction(){
