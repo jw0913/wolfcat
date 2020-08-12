@@ -13,6 +13,7 @@
         <module>localcache</module>
         <module>javassist</module>
         <module>canal</module>
+        <module>oauth2</module>
     </modules>
 
     <properties>
